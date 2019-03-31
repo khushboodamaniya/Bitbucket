@@ -1,0 +1,31 @@
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class=" col-lg-12 col-md-12  col-12 backdropimg" [ngStyle]="{background: 'url(https://image.tmdb.org/t/p/w1280/' + MovieDetail.backdropURL + ')'}">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+      <div class = "col-lg-3 col-md-3 col-4">
+          <img src="https://image.tmdb.org/t/p/w500/{{MovieDetail.posterURL}}" class="img-fluid moviePoster" >
+      </div>
+      <div class= "col-lg-9 col-md-9 col-8">
+        <div>
+        <a class="movietitle" >{{MovieDetail.title}}</a>
+        </div>
+        <div>
+        <button (click)="backToList()" class="btn btn-info" >Back to List</button>
+        <button (click)="deleteMovie(MovieDetail._id)" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-11 col-md-12 col-12 moviePlot">
+       
+      {{MovieDetail.plot}}
+
+    </div>
+  </div>
+  </div>
+  
