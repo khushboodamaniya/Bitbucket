@@ -9,27 +9,32 @@ import { Location } from '@angular/common';
 })
 export class MovieDetailComponent implements OnInit {
   public MovieDetail:any = [];
+  public hideSpinner:boolean=true;
   constructor(private route: ActivatedRoute,
     private router: Router,
     private moviesService : MoviesService,
     private location: Location) { }
   
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('slug');
-    console.log(id,"id");
-    let moviedetail = this.moviesService.getMovieDetail(id);
+    let movieSlug = this.route.snapshot.paramMap.get('slug');
+    let moviedetail = this.moviesService.getMovieDetail(movieSlug);
     this.MovieDetail= moviedetail;
-    console.log(moviedetail,"moviedetail" , this.MovieDetail);
+    
   }
   backToList(){
     this.location.back();
   }
   deleteMovie(movieId){
+    this.hideSpinner = false;
     this.moviesService.deleteMovie(movieId).subscribe(response => {
-      console.log(response,"Response of delete API")
+     // console.log(response,"Response of delete API")
       this.moviesService.deleteFromSession(movieId);
+      this.hideSpinner = true;
       this.location.back();
-    })
+    },error => {
+       alert("Service is not available");
+       this.location.back();
+    });
 
   }
 

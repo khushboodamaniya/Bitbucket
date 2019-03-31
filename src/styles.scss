@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 body{
     font-size: 1rem;
     color: #9ab !important;
@@ -37,6 +38,20 @@ body{
         .btn{
             margin-right: 10px;
         }
+        .sna-parent{
+            background-image: url('./assets/404.jpg');
+            background-repeat: no-repeat !important;
+            background-size: 100% 100% !important;
+            height: 576px;
+        }
+        .sna-text{
+            background: chocolate;
+            text-align: center;
+            height: 123px;
+            padding: 12px;
+            color: #fff;
+            font-size: 58px;
+        }
 }
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -53,9 +68,9 @@ body{
             float: right;
             margin-top: -144px;
         }
-    .movietitle{
-        font-size:1.2rem;
-    }
+        .movietitle{
+            font-size:1.2rem;
+        }
         }
     
   }
@@ -69,13 +84,13 @@ body{
     
     //CSS
     body{
-    .moviePlot{
-        padding:0px;
+        .moviePlot{
+            padding:0px;
+        }
+        .movietitle{
+            font-size:1.2rem;
+        }
     }
-    .movietitle{
-        font-size:1.2rem;
-    }
-}
     
   }
   
@@ -114,20 +129,19 @@ body{
   
     //CSS
     body{
-    .moviePoster{
-    height: auto !important;
-    float: right;
-    margin-top: -67px !important;
+        .moviePoster{
+        height: auto !important;
+        float: right;
+        margin-top: -67px !important;
+        }
+        .moviePlot{
+            padding-left:15px !important;
+        }
+        .backdropimg{
+            height: 200px !important;
+        }
+        .movietitle{
+            font-size:1.2rem;
+        }
     }
-    .moviePlot{
-        padding-left:15px !important;
-    }
-    .backdropimg{
-        height: 200px !important;
-    }
-    .movietitle{
-        font-size:1.2rem;
-    }
-
-}
   }

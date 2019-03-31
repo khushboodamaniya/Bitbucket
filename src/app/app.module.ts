@@ -9,11 +9,13 @@ import { MoviesService } from './services/movies.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageServiceModule} from 'angular-webstorage-service';
 import { BrowserAnimationsModule } from  '@angular/platform-browser/animations';
+import { NotAvailableComponent } from './component/not-available/not-available.component';
 @NgModule({
   declarations: [
     AppComponent,
     MovieDetailComponent,
-    MovieContinerComponent
+    MovieContinerComponent,
+    NotAvailableComponent
     
   ],
   imports: [
